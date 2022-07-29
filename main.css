@@ -1,17 +1,59 @@
-.chart__container {
+:root {
+  --main: hsl(10, 79%, 65%);
+  --accent: hsl(186, 34%, 60%);
+
+  --neutral-dark: hsl(25, 47%, 15%);
+  --neutral: hsl(28, 10%, 53%);
+  --neutral-light: hsl(27, 66%, 92%);
+
+  --light: hsl(33, 100%, 98%);
+  --text-size: 1.125rem;
+  --family: 'DM Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--neutral-light);
+  font-family: var(--family);
+}
+
+h1,h2,p {
+  margin: 0;
+}
+
+.card__header {
+  background-color: var(--main);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+.card__content {
+  border-radius: 15px;
+  background-color: var(--light);
+}
+.card__footer {
+  background-color: var(--light);
+}
+
+.card__charts {
   display: flex;
   gap: 1em;
   text-align: center;
 }
 
-.chart {
+.card__chart {
   height: 6rem;
   background-color: brown;
   min-width: 30px;
 }
 
-p {
-  margin: 0;
-  margin-block-start: .5em;
+/* ################ Utilities */
+.box-spacing {
+  padding: 1em;
 }
 

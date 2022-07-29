@@ -4,38 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <title>Expenses chart component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./main.css">
   <script defer src="./main.js"></script>
+
 </head>
 <body>
   <main>
-    <article>
-      <header>
+    <article class="card">
+      <header class="box-spacing card__header">
         <div>
           <p>My balance</p>
           <h2>$921.48</h2>
         </div>
         <img src="./images/logo.svg" alt="logo">
       </header>
-      <section>
+      <section class="box-spacing card__content">
         <h1>Spending - Last 7 days</h1>
         <!-- Charts -->
-        <div class="chart__container">
+        <div id="chart-container" class="card__charts">
           <div>
-            <div class="chart"></div>
+            <div class="card__chart"></div>
             <p>mon</p>
           </div>
           <div>
-            <div class="chart"></div>
+            <div class="card__chart"></div>
             <p>tue</p>
           </div>
           <div>
-            <div class="chart"></div>
+            <div class="card__chart"></div>
             <p>wen</p>
           </div>
         </div>
       </section>
-      <footer>
+      <footer class="box-spacing card__footer">
         <div>
           <p>Total this month</p>
           <h2>$478.33</h2>
