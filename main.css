@@ -9,7 +9,6 @@
   --light: hsl(33, 100%, 98%);
   --text-size: 1.125rem;
   --family: 'DM Sans', sans-serif;
-  /* --tooltip-display: block; */
 }
 
 *,
@@ -149,7 +148,6 @@ main {
   font-weight: 700;
 }
 
-/* ################ Utilities */
 .box-spacing {
   padding-block: 1.2em;
   padding-inline: 2em;

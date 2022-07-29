@@ -43,31 +43,59 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- JavaScript
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This project looked very easy at first, but then It had some things that I had to think about to know how to solve.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+On cool tricked that I used, was to make the tooltip work with only `css`:
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+
+.card__chart {
+  /* Styles */
+  --tooltip-display: none;
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+.card__chart:hover {
+  /* Styles */
+  --tooltip-display: block;
+}
+
+.card__chart::before {
+  /* Styles */
+  display: var(--tooltip-display);
 }
 ```
 
+To make the charts dynamic I created a Class to encapsuled the logic of the new elements
+```js
+class Chart {
+  constructor(element){
+    this.element = document.createElement(element)
+    this.scale = 2.5
+    this.height = 0
+  }
+}
+```
+In this way I was able to create instances of `Chart` to create all the different charts according to the data
+```js
+  data.map(({value, day}) => {
+    const newChart = new Chart('div')
+    newChart.setContent(value,day)
+  })
+```
+I wanted to use de data as json, but it's not allowed to import as a module a `.json` yet, instead y refactored the data as a `.js` file and then export it as a module
+
+```js
+export default data = [
+  {amount: 1, day: 'mon'},
+  ....  
+]
+```
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Devdocsio](devdocs.io/) - This is a great source of information for the main web technologies, is also great that you can set it up to use it offline.
+- [Custom properties tricks](https://css-tricks.com/how-to-get-all-custom-properties-on-a-page-in-javascript/) - Great article to understand how to use custom properties with JavaScript.
 
 ## Author
 
