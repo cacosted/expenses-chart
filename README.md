@@ -1,12 +1,11 @@
 # Frontend Mentor - Expenses chart component solution
-
+![Demo screenshot](https://user-images.githubusercontent.com/57645180/181860784-312aa4ed-ba14-4b1b-9469-05aae454f4fc.png)
 This is a solution to the [Expenses chart component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -26,13 +25,9 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - **Bonus**: Use the JSON data file provided to dynamically size the bars on the chart
 
-### Screenshot
-
-![](./screenshot.jpg)
-
 ### Links
 
-- Live Site URL: [Live Demo](https://your-live-site-url.com)
+- Live Site URL: [Live Demo](https://cacosted.github.io/expenses-chart)
 
 ## My process
 
