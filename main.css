@@ -9,7 +9,7 @@
   --light: hsl(33, 100%, 98%);
   --text-size: 1.125rem;
   --family: 'DM Sans', sans-serif;
-  --tooltip-display: none;
+  /* --tooltip-display: block; */
 }
 
 *,
@@ -89,17 +89,20 @@ main {
   min-width: 40px;
   border-radius: 5px;
   position: relative;
+  --tooltip-display:none; 
 }
 
 .card__chart:hover {
   filter: brightness(130%);
+  --tooltip-display:block; 
 }
 
 .card__chart::before {
   display: var(--tooltip-display);
   position: absolute;
-  top: -40%;
+  top: 0;
   left: 0;
+  transform: translate(-16%,-140%);
   content:'$' attr(data-price);
   width: min-content;
   padding-block: .15em;
