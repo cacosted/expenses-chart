@@ -39,12 +39,13 @@ main {
 
 .card {
   width: 80%;
-  max-width: 500px;
+  max-width: 450px;
 }
 .card__header {
   background-color: var(--main);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-radius: 15px;
   color: var(--light);
 }
@@ -53,7 +54,9 @@ main {
   background-image: url('./images/logo.svg');
   background-repeat: no-repeat;
   background-position: center;
-  width: 33%;
+  background-size: contain;
+  min-height: 40px;
+  width: 20%;
   margin: 0;
 }
 
@@ -86,6 +89,10 @@ main {
   min-width: 40px;
   border-radius: 5px;
   position: relative;
+}
+
+.card__chart:hover {
+  filter: brightness(130%);
 }
 
 .card__chart::before {
@@ -141,7 +148,7 @@ main {
 
 /* ################ Utilities */
 .box-spacing {
-  padding-block: 1em;
+  padding-block: 1.2em;
   padding-inline: 2em;
 }
 
