@@ -15,40 +15,40 @@
   <main>
     <article class="card">
       <header class="box-spacing card__header">
-        <div>
+        <div class="card__balance">
           <p>My balance</p>
-          <h2>$921.48</h2>
+          <h2 class="card__current">$921.48</h2>
         </div>
-        <img src="./images/logo.svg" alt="logo">
+        <figure class="card__img"></figure>
       </header>
       <section class="box-spacing card__content">
-        <h1>Spending - Last 7 days</h1>
+        <h1 class="card__title">Spending - Last 7 days</h1>
         <!-- Charts -->
         <div id="chart-container" class="card__charts">
           <div>
             <div class="card__chart"></div>
-            <p>mon</p>
+            <p class="light-text">mon</p>
+          </div>
+          <div>
+            <div class="card__chart card__chart--max"></div>
+            <p class="light-text">tue</p>
           </div>
           <div>
             <div class="card__chart"></div>
-            <p>tue</p>
-          </div>
-          <div>
-            <div class="card__chart"></div>
-            <p>wen</p>
+            <p class="light-text">wen</p>
           </div>
         </div>
+        <footer class="card__footer">
+          <div class="footer__month--current">
+            <p class="footer__title--current light-text">Total this month</p>
+            <h3 class="footer__total">$478.33</h3>
+          </div>
+          <div class="footer__month--last">
+            <p class="footer__percentage">+2.4%</p>
+            <p class="footer__title--last light-text">from last month</p>
+          </div>
+        </footer>
       </section>
-      <footer class="box-spacing card__footer">
-        <div>
-          <p>Total this month</p>
-          <h2>$478.33</h2>
-        </div>
-        <div>
-          <p>+2.4%</p>
-          <p>from last month</p>
-        </div>
-      </footer>
     </article>
   </main>
 </body>
