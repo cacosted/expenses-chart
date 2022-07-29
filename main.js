@@ -1,15 +1,24 @@
 import Chart from './Chart.js'
-const MONTHS = ['mon','tue','wen','thu','fri','sat','sun']
+import data from './data.js'
 
 const chartContainer = document.querySelector('#chart-container')
+const maxColor = getComputedStyle(document.documentElement).getPropertyValue('--accent')
+const largeHeight = Math.max(...data.map(item => item.amount))
 
-const chartList = MONTHS.map(month => {
+const chartList = data.map(balance => {
   const newChart = new Chart('div')
-  newChart.setContent(`<div class="card__chart" data-price="52.36"></div>
-  <p class="light-text">${month}</p>
+  newChart.setContent(`<div class="card__chart" data-price="${balance.amount}" height="${balance.amount}rem"></div>
+  <p class="light-text">${balance.day}</p>
   `) 
-  newChart.setId('id',month)
+  
+  if(balance.amount === largeHeight) {
+    newChart.setMaxColor(maxColor)
+  }
+  
+  newChart.setHeight(balance.amount)
+  
   return newChart.element
 });
 
+// console.log(chartList);
 chartContainer.append(...chartList)
