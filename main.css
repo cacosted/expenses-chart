@@ -162,3 +162,13 @@ main {
 .separator {
   color: var(--neutral-light)  
 }
+
+@media (max-width: 500px) {
+  .card__charts {
+    overflow: scroll;
+  }
+
+  .card__footer {
+    flex-wrap: wrap;
+  }
+}
